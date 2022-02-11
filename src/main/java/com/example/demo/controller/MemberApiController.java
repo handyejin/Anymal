@@ -37,7 +37,7 @@ public class MemberApiController {
         String id = memberServiceDto.getMember();
         System.out.println("id="+id);
         Optional<Member> member = checkIdDuplicate(id);
-        // 중복 x
+
         if(member.isEmpty()){
             String save = memberService.save(memberServiceDto);
             return false;
