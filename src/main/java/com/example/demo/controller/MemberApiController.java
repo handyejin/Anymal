@@ -41,11 +41,9 @@ public class MemberApiController {
         if(member.isEmpty()){
             String save = memberService.save(memberServiceDto);
             return false;
-
         }else{
             return true;
         }
-
     }
     public Optional<Member> checkIdDuplicate(String id){
         return memberService.checkIdDuplicate(id);
